@@ -14,7 +14,7 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" id="navbar">
   <div class="container">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -33,6 +33,22 @@
     </div>
   </div>
 </nav>
+
+<!<!-- Sticky navigation bar -->
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
@@ -69,6 +85,7 @@
   </div>
 </div>
 
+<!-- Container with parrots -->
 <div class="container-fluid bg-2 text-center">
     <h3 class="margin" id="who">Krāsaina bilde</h3>
     <p>Izmantojot css, var panākt, ka bilde ir melnbalta, taču, kad uz tās tiek novietots kursors, tā palielinās un iekrāsojas.</p>
@@ -76,6 +93,7 @@
   
 </div>
 
+<!-- Container with multiple birds -->
 <div class="container-fluid bg-1 text-center">
     <h3 class="margin" id="what">Bildes pārklājums</h3>
     <p>Ar css vien bildēm var izveidot pārklājumu jeb <i>overlay</i>. Tam var pievienot dažādus efektus un tekstu un bildes.</p>
@@ -107,18 +125,25 @@
     </div>
 </div>
 
+<!-- Container with text -->
 <div class="container-fluid bg-2" id="where">
     <div class="circle"></div>
     <p>Ar css ir iespējams arī formatēt tekstu interesantos veidos. Šajā gadījumā teksts aptver apļa formu.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac sem facilisis, vulputate enim non, pellentesque sem. Nam sed tristique erat. Nulla a nisi sed orci cursus egestas. Vivamus eu blandit ex. Nunc ullamcorper ante eu massa suscipit consequat. Vestibulum a bibendum nisi. Morbi et malesuada augue. Proin vitae ipsum ipsum. Fusce efficitur lacus quis tempus tempor. Quisque ut elementum mauris. Mauris dictum massa eu nulla pretium, a hendrerit elit semper.
-Mauris vitae quam ut justo imperdiet dapibus. Integer aliquet odio quis dolor porttitor faucibus. Suspendisse at ligula tristique nunc venenatis facilisis. Pellentesque porttitor, quam vel sagittis ullamcorper, nisi tortor aliquet magna, id tincidunt mi turpis at ex. Suspendisse rutrum felis lacus, id ultricies purus lobortis in. Praesent libero eros, convallis in purus eget, mollis eleifend neque. Maecenas lobortis porttitor elit, non cursus ligula venenatis at. 
-Curabitur laoreet, tortor vitae dignissim posuere, tellus nisi lobortis mi, fringilla feugiat nisl lacus quis turpis. Curabitur in lacinia odio, sed vestibulum dolor. 
-Sed tempus justo ac augue cursus, in porttitor felis maximus. Nunc non finibus nibh. Aliquam molestie lacus id velit iaculis laoreet. 
-Nunc vehicula libero quis diam laoreet, at volutpat ex feugiat. Praesent bibendum laoreet eros, vel porttitor arcu.
-Ut dignissim erat est, at ullamcorper purus aliquet quis. Curabitur consectetur placerat metus, ac fermentum massa porta id. Duis eu tincidunt mi. Quisque vel eleifend ligula, vel euismod ex. Ut elementum urna sed augue porta placerat. Nullam finibus vel magna in faucibus. In convallis nibh mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum dolor lorem. Sed dictum aliquam ligula quis posuere. Donec scelerisque nisl ut lobortis tempor. Donec massa quam, ornare blandit congue imperdiet, elementum at erat. 
-Cras mollis, ligula et finibus lacinia, velit leo eleifend lectus, a commodo nisl tortor et felis. Nunc nec arcu id tellus dapibus tincidunt.
-Duis a eros a dolor sodales consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean rhoncus consectetur justo, sed vehicula ligula molestie non. Suspendisse pulvinar lorem purus, sed venenatis massa hendrerit ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce quis efficitur nulla, et pellentesque purus. Nunc molestie elementum libero. Nam molestie vehicula arcu sit amet ultricies. Integer ac velit a magna condimentum mollis.
-Morbi vel enim at orci tempus fringilla non id sapien. Mauris mi quam, congue a venenatis et, mattis non nisl. Proin non dolor et nulla tristique condimentum. Nulla ut eros leo. In nec urna nisl. Nam id auctor mi, quis lobortis massa. Suspendisse eu urna elementum, rutrum ante suscipit, posuere ipsum. Proin tincidunt mauris vitae tellus egestas, nec pulvinar dui porttitor. Aliquam sit amet metus in mi elementum mollis in in ipsum. Vestibulum volutpat, nisi suscipit molestie consectetur, nulla libero aliquet nisl, nec semper nisi dui id diam.  
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac sem facilisis, vulputate enim non, pellentesque sem. Nam sed tristique erat. Nulla a nisi sed orci cursus egestas. 
+    Vivamus eu blandit ex. Nunc ullamcorper ante eu massa suscipit consequat. Vestibulum a bibendum nisi. Morbi et malesuada augue. Proin vitae ipsum ipsum. Fusce efficitur lacus quis tempus tempor. 
+    Quisque ut elementum mauris. Mauris dictum massa eu nulla pretium, a hendrerit elit semper.
+    Mauris vitae quam ut justo imperdiet dapibus. Integer aliquet odio quis dolor porttitor faucibus. Suspendisse at ligula tristique nunc venenatis facilisis. Pellentesque porttitor, quam vel sagittis ullamcorper, nisi tortor aliquet magna, id tincidunt mi turpis at ex. 
+    Suspendisse rutrum felis lacus, id ultricies purus lobortis in. Praesent libero eros, convallis in purus eget, mollis eleifend neque. Maecenas lobortis porttitor elit, non cursus ligula venenatis at. 
+    Curabitur laoreet, tortor vitae dignissim posuere, tellus nisi lobortis mi, fringilla feugiat nisl lacus quis turpis. Curabitur in lacinia odio, sed vestibulum dolor. 
+    Sed tempus justo ac augue cursus, in porttitor felis maximus. Nunc non finibus nibh. Aliquam molestie lacus id velit iaculis laoreet. 
+    Nunc vehicula libero quis diam laoreet, at volutpat ex feugiat. Praesent bibendum laoreet eros, vel porttitor arcu.
+    Ut dignissim erat est, at ullamcorper purus aliquet quis. Curabitur consectetur placerat metus, ac fermentum massa porta id. Duis eu tincidunt mi. Quisque vel eleifend ligula, vel euismod ex. Ut elementum urna sed augue porta placerat. Nullam finibus vel magna in faucibus. I
+    n convallis nibh mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum dolor lorem. Sed dictum aliquam ligula quis posuere. Donec scelerisque nisl ut lobortis tempor. Donec massa quam, ornare blandit congue imperdiet, elementum at erat. 
+    Cras mollis, ligula et finibus lacinia, velit leo eleifend lectus, a commodo nisl tortor et felis. Nunc nec arcu id tellus dapibus tincidunt.
+    Duis a eros a dolor sodales consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean rhoncus consectetur justo, sed vehicula ligula molestie non. Suspendisse pulvinar lorem purus, sed venenatis massa hendrerit ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+    Fusce quis efficitur nulla, et pellentesque purus. Nunc molestie elementum libero. Nam molestie vehicula arcu sit amet ultricies. Integer ac velit a magna condimentum mollis.
+    Morbi vel enim at orci tempus fringilla non id sapien. Mauris mi quam, congue a venenatis et, mattis non nisl. Proin non dolor et nulla tristique condimentum. Nulla ut eros leo. In nec urna nisl. Nam id auctor mi, quis lobortis massa. Suspendisse eu urna elementum, rutrum ante suscipit, posuere ipsum. Proin tincidunt mauris vitae tellus egestas, nec pulvinar dui porttitor. 
+    Aliquam sit amet metus in mi elementum mollis in in ipsum. Vestibulum volutpat, nisi suscipit molestie consectetur, nulla libero aliquet nisl, nec semper nisi dui id diam.  
 </p>
 </div>
 <!-- Footer -->
