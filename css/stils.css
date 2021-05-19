@@ -37,5 +37,16 @@ body {
   .navbar-nav  li a:hover {
     color: #1abc9c !important;
   }
-
+.image {
+    width: 50%;
+    overflow: hidden;
+}
+.image-colorize {
+    transition: transform .5s, filter 0.5s ease-in-out;
+    filter: grayscale(100%);
+}
+.image-colorize:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
 
