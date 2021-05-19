@@ -38,7 +38,7 @@ body {
     color: #1abc9c !important;
   }
 .image {
-    width: 50%;
+    width: 40%;
     overflow: hidden;
 }
 .image-colorize {
@@ -49,4 +49,49 @@ body {
     filter: grayscale(0);
     transform: scale(1.1);
 }
+.container {
+  position: relative;
+  width: 50%;
+}
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #2f2f2f;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
 
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+ }
+ .row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
