@@ -1,13 +1,18 @@
 window.onscroll = function() {stickyNavBar();};
 
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
 function stickyNavBar() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+
+function laukums(n){
+    let p = document.createElement("P");
+    p.innerHTML = "Te būs laukums ar " + n + " lauciņiem";
+    document.getElementById("dinamisks").appendChild(p);
 }
 
