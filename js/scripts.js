@@ -11,6 +11,7 @@ function stickyNavBar() {
 }
 
 function laukums(n){
+    
     let p = document.createElement("P");
     p.innerHTML = "Te būs laukums ar " + n * n + " lauciņiem";
     document.getElementById("dinamisks").appendChild(p);
@@ -30,7 +31,5 @@ function laukums(n){
             skaitlis++;
         }
     }
-    
-    
 }
 
